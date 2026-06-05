@@ -1,0 +1,97 @@
+# Company FAQ — Knowledge Base
+
+## Account & Login
+
+Q: How do I reset my password?
+A: Go to the login page and click "Forgot Password". Enter your registered email address and check your inbox for a reset link. The link expires in 30 minutes. If you don't see it, check your spam folder.
+
+Q: How do I create an account?
+A: Click "Sign Up" on our homepage. Fill in your name, email, and choose a password. You'll receive a verification email — click the link to activate your account.
+
+Q: My account is locked. What do I do?
+A: Accounts are locked after 5 failed login attempts. Wait 30 minutes and try again, or click "Forgot Password" to reset your credentials immediately.
+
+Q: How do I update my email address?
+A: Go to Account Settings → Personal Info → Edit Email. You'll need to verify the new email address before the change takes effect.
+
+---
+
+## Orders & Delivery
+
+Q: How do I track my order?
+A: Log into your account and go to Orders. Click on your order number to see real-time tracking information. You'll also receive SMS and email updates at each delivery stage.
+
+Q: How long does delivery take?
+A: Standard delivery within Lagos: 1-2 business days. Other states in Nigeria: 3-5 business days. International: 7-14 business days.
+
+Q: My order hasn't arrived. What should I do?
+A: If your order is past the expected delivery date, first check the tracking status in your account. If tracking shows delivered but you haven't received it, contact us immediately with your order ID and we'll investigate.
+
+Q: Can I change my delivery address after placing an order?
+A: You can change the delivery address within 1 hour of placing an order by contacting support. After that, the order may already be processed for shipment.
+
+Q: What do I do if I received the wrong item?
+A: We're sorry for the mix-up! Take a photo of the item received and contact support with your order ID. We'll arrange a free return pickup and send the correct item within 2 business days.
+
+---
+
+## Payments & Billing
+
+Q: What payment methods do you accept?
+A: We accept bank transfers, card payments (Visa/Mastercard), USSD, and PayStack. All transactions are secured with 256-bit SSL encryption.
+
+Q: My payment was deducted but the order wasn't placed. What happened?
+A: This sometimes happens due to network issues. The amount is usually reversed within 24-72 hours by your bank. If it doesn't reflect, contact us with your transaction reference and we'll resolve it immediately.
+
+Q: How do I get an invoice for my order?
+A: Go to Orders → Select your order → Click "Download Invoice". The invoice is generated as a PDF.
+
+Q: Can I pay on delivery?
+A: Pay on delivery is available in Lagos only for orders under ₦50,000. Select "Pay on Delivery" at checkout.
+
+---
+
+## Refunds & Returns
+
+Q: What is your refund policy?
+A: We offer a 30-day return policy for most items. Items must be unused, in original packaging, and accompanied by the receipt. Refunds are processed within 5-7 business days after we receive the returned item.
+
+Q: How do I request a refund?
+A: Go to Orders → Select the item → Click "Request Return/Refund" → Fill in the reason. Our team will review and approve within 24 hours. You'll receive a return pickup within 2 business days.
+
+Q: When will I receive my refund?
+A: After we receive and inspect the returned item, refunds are processed within 5-7 business days. The money returns to your original payment method.
+
+Q: Are there items that cannot be refunded?
+A: Perishable items, digital products once downloaded, customized/personalized items, and items marked "Final Sale" cannot be returned or refunded.
+
+---
+
+## Technical Support
+
+Q: The app keeps crashing. What should I do?
+A: First, try clearing the app cache (Settings → Apps → Clear Cache). If the problem persists, uninstall and reinstall the latest version. If it still crashes, contact technical support with your device model and app version.
+
+Q: I'm getting an error message during checkout. What do I do?
+A: Common checkout errors are caused by: expired card, insufficient funds, or network issues. Try a different payment method or contact your bank. If the error persists, contact us with a screenshot of the error message.
+
+---
+
+## Business Hours & Contact
+
+Q: What are your business hours?
+A: Monday – Friday: 8:00 AM – 6:00 PM WAT
+   Saturday: 9:00 AM – 2:00 PM WAT
+   Sunday & Public Holidays: Closed
+   
+   Our AI support agent is available 24/7!
+
+Q: How can I contact a human agent?
+A: You can reach our human support team via:
+   - Live chat (during business hours)
+   - Email: support@mybusiness.com
+   - Phone: 0800-SUPPORT (toll-free)
+   - WhatsApp: +234 800 000 0000
+
+Q: How quickly do you respond to emails?
+A: We aim to respond to all emails within 4 business hours. Urgent issues (payment problems, missing orders) are prioritized and typically resolved within 1-2 hours.
