@@ -84,7 +84,7 @@ class SupportAgent:
         docs = self.search_docs(query)
         if not docs:
             return "No relevant documentation found."
-        return "\n\n".join([f"[From {d['source']}]: {d['content']}" for d in docs])
+        return "\n\n".join([f"[From {d['source']}]: {d['content'][:300]}" for d in docs])
 
     def _should_escalate(self, text: str) -> bool:
         return any(kw in text.lower() for kw in ESCALATE_KEYWORDS)
@@ -98,11 +98,12 @@ class SupportAgent:
         force_ticket = self._should_create_ticket(user_message)
 
         lc_messages = []
-        for msg in history[-6:]:
-            if msg["role"] == "user":
-                lc_messages.append(HumanMessage(content=msg["content"]))
-            elif msg["role"] == "assistant":
-                lc_messages.append(AIMessage(content=msg["content"]))
+for msg in history[-2:]:  # Only last 1 exchange
+    if msg["role"] == "user":
+        lc_messages.append(HumanMessage(content=msg["content"]))
+    elif msg["role"] == "assistant":
+        content = msg["content"][:200]  # Trim long replies
+        lc_messages.append(AIMessage(content=content))
 
         prompt = ChatPromptTemplate.from_messages([
             ("system", SYSTEM_PROMPT),
