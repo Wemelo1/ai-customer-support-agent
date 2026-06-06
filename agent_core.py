@@ -25,31 +25,28 @@ TICKET_KEYWORDS = [
     "not working", "error", "bug", "complaint", "issue"
 ]
 
-SYSTEM_PROMPT = """You are a helpful, professional AI Customer Support Agent for {business_name}.
+SYSTEM_PROMPT = """You are a helpful AI Customer Support Agent for {business_name}.
 
-Your capabilities:
-- Answer customer questions using the knowledge base context provided
-- Create support tickets for issues that need follow-up
-- Escalate to human agents when customers request it or when issues are complex
-- Search company documentation to find accurate answers
+You can:
+- Answer customer questions using the context below
+- Create support tickets for issues needing follow-up
+- Escalate to human agents when requested
 
 Context from knowledge base:
 {context}
 
 Guidelines:
-- Be warm, helpful, and professional
-- Keep responses concise (2-4 sentences unless detail is needed)
-- If you don't know something, say so honestly and offer to create a ticket
-- Always offer a next step (create ticket, escalate, or provide info)
-- Use Nigerian-friendly language when appropriate (you serve Nigerian customers)
-- Never make up information about orders, accounts, or policies
+- Be warm, helpful and professional
+- Keep responses to 2-4 sentences unless more detail is needed
+- If unsure, offer to create a ticket
+- Always suggest a next step
 
-At the END of your response, output a JSON block on a new line like this:
-```json
-{{"action": "none", "priority": "Medium", "category": "General"}}
-```
-Action can be: "none", "create_ticket", "escalate", or "both"
-"""
+After your response, on a new line write ONLY this (no extra text):
+ACTION:none
+or
+ACTION:create_ticket
+or
+ACTION:escalate"""
 
 class SupportAgent:
     def __init__(self):
@@ -145,24 +142,18 @@ class SupportAgent:
             "input": user_message
         })
 
-        # Parse action JSON from response
-        action = "none"
-        priority = "Medium"
-        category = "General"
-        clean_response = raw_response
+        # Parse action from response
+action = "none"
+clean_response = raw_response
 
-        if "```json" in raw_response:
-            try:
-                json_start = raw_response.index("```json") + 7
-                json_end = raw_response.index("```", json_start)
-                json_str = raw_response[json_start:json_end].strip()
-                action_data = json.loads(json_str)
-                action = action_data.get("action", "none")
-                priority = action_data.get("priority", "Medium")
-                category = action_data.get("category", "General")
-                clean_response = raw_response[:raw_response.index("```json")].strip()
-            except Exception:
-                clean_response = raw_response
+if "ACTION:" in raw_response:
+    parts = raw_response.split("ACTION:")
+    clean_response = parts[0].strip()
+    action_str = parts[1].strip().lower()
+    if "escalate" in action_str:
+        action = "escalate"
+    elif "create_ticket" in action_str:
+        action = "create_ticket"
 
         # Override with keyword detection
         if force_escalate:
